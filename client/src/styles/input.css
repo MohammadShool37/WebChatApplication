@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    /* Customize the scrollbar track (the background) */
+    ::-webkit-scrollbar {
+        width: 7px;
+        /* Width of the scrollbar */
+    }
+
+    /* Customize the scrollbar thumb (the draggable handle) */
+    ::-webkit-scrollbar-thumb {
+        background-color: #333;
+        /* Color of the thumb */
+        border-radius: 6px;
+        /* Rounded corners for the thumb */
+    }
+
+    /* Customize the scrollbar track on hover */
+    ::-webkit-scrollbar-track:hover {
+        background-color: transparent;
+        /* Color of the track on hover */
+    }
+
+    /* Customize the scrollbar thumb on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #666;
+        /* Color of the thumb on hover */
+    }
+
+}

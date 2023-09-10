@@ -1,11 +1,14 @@
-function HomeScreen ()
-{
+import Chat from "../components/Chat";
+import ChatList from "../components/ChatList";
+import Chats from "../components/Chats";
+import SendMessage from "../components/SendMessage";
+
+function HomeScreen() {
     return (
-        <div>
-            <h1 className="">
-                home screen
-            </h1>
-        </div>
+        <ChatList>
+            <Chats />
+            <SendMessage />
+        </ChatList>
     )
 }
 
