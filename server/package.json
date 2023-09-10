@@ -1,0 +1,25 @@
+{
+  "name": "web-chat-application-server",
+  "version": "0.1.0",
+  "description": "socket io server for web chat application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon"
+  },
+  "keywords": [
+    "nodejs",
+    "socketio",
+    "socket.io",
+    "web chat application",
+    "web",
+    "chat"
+  ],
+  "author": "MohammadShool37",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "socket.io": "^4.7.2"
+  }
+}
