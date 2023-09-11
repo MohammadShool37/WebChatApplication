@@ -2,13 +2,13 @@ import { Avatar, Button, IconButton, Input, List, ListItem, ListItemPrefix, Typo
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
-function ChatList({ children }) {
+function ChatList({ children, chats=[], onChatClick = ()=>{} }) {
     return (
         <div className="w-full h-full flex flex-row">
-            <div className="flex-1 bg-[#172129] rounded-bl-lg p-1 flex flex-col items-center">
+            <div className="flex-1 bg-[#172129] rounded-bl-lg p-1 hidden lg:flex flex-col items-center">
                 <SearchForm />
                 <div className="w-full h-full overflow-y-scroll">
-                    <Chats />
+                    <Chats chats={chats} onClick={onChatClick} />
                 </div>
             </div>
             <div className="flex-[2] relative">
@@ -39,165 +39,26 @@ function SearchForm() {
     );
 }
 
-function Chats() {
+function Chats({ chats = [], onClick=()=>{} }) {
     return (
         <List>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar1.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar2.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar3.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar1.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar2.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar3.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar1.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar2.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar3.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar1.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar2.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
-            <ListItem>
-                <ListItemPrefix>
-                    <Avatar variant="circular" alt="" src="/images/avatar3.png" />
-                </ListItemPrefix>
-                <div>
-                    <Typography variant="h6" color="white">
-                        Tania Andrew
-                    </Typography>
-                    <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
-                        Software Engineer @ Material Tailwind
-                    </Typography>
-                </div>
-            </ListItem>
+            {chats.map(chat => {
+                return (
+                    <ListItem onClick={()=>onClick (chat)} key={chat.id}>
+                        <ListItemPrefix>
+                            <Avatar variant="circular" alt="" src={`/images/avatar${chat.creator.avatar_id}.png`} />
+                        </ListItemPrefix>
+                        <div>
+                            <Typography variant="h6" color="white">
+                                {chat.creator.username}
+                            </Typography>
+                            <Typography variant="small" color="white" className="font-normal text-[#6a6a6a]">
+                                {chat.chats [chat.chats.length - 1].msg}
+                            </Typography>
+                        </div>
+                    </ListItem>
+                );
+            })}
         </List>
     )
 }

@@ -107,6 +107,12 @@ function LoginPage() {
 
 function RegisterPage() {
     return (
+        <h2>
+            Comming Soon ...ّ
+        </h2>
+    );
+
+    return (
         <div className="flex justify-center items-center flex-col gap-4">
             <Typography className="text-center" variant="h4" color="white">
                 Register
